@@ -50,11 +50,24 @@
     function onError(compassError) {
         alert('Compass error: ' + compassError.code);
     }
+	//--------------
+	var div = document.getElementsByTagName("div")[0];
+            var img = div.childNodes[0];
+            
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener("deviceorientation") {
+                    img.style.webkitTransform = "rotateZ(" + heading + "deg)";
+                    img.style.transform = "rotateZ(" + heading + "deg)";
+                }, false);
+            } else {
+                alert("Teu browser é desorientado, vei. Taca fogo nele!");
+            }
 
     </script>
   </head>
   <body>
     <div id="heading">Waiting for heading...</div>
+    <div><img src="bussola1.png"/></div>
     <button onclick="startWatch();">Start Watching</button>
     <button onclick="stopWatch();">Stop Watching</button>
   </body>
