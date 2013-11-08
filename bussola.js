@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Compass Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
-    <script type="text/javascript" charset="utf-8" src="bussola.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-   /* // The watch id references the current `watchHeading`
-    var watchID = null;
+// JavaScript Document
+var watchID = null;
 
     // Wait for device API libraries to load
     //
@@ -51,14 +42,3 @@
     function onError(compassError) {
         alert('Compass error: ' + compassError.code);
     }
-	
-
-    </script>*/
-  </head>
-  <body>
-    <div id="heading">Waiting for heading...</div>
-
-    <button onclick="startWatch();">Start Watching</button>
-    <button onclick="stopWatch();">Stop Watching</button>
-  </body>
-</html>
